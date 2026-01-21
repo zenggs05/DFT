@@ -1,0 +1,59 @@
+&FORCE_EVAL
+  METHOD QS
+  &PRINT
+    &FORCES ON
+    &END FORCES
+  &END PRINT
+  &DFT
+    BASIS_SET_FILE_NAME BASIS_MOLOPT
+    POTENTIAL_FILE_NAME GTH_POTENTIALS
+    &MGRID
+      CUTOFF 400
+      REL_CUTOFF 60
+    &END MGRID
+    &QS
+      EPS_DEFAULT 1.0E-13
+    &END QS
+    &SCF
+      SCF_GUESS RESTART
+      EPS_SCF 3.0E-7
+      MAX_SCF 50
+      &OUTER_SCF
+        EPS_SCF 3.0E-7
+        MAX_SCF 10
+      &END OUTER_SCF
+      &OT
+        MINIMIZER DIIS
+        PRECONDITIONER FULL_SINGLE_INVERSE
+      &END OT
+    &END SCF
+    &XC
+      ########## This part is PBE ##########
+      &XC_FUNCTIONAL PBE
+      &END XC_FUNCTIONAL
+      ########## This part is PBE ##########
+    &END XC
+  &END DFT
+  &SUBSYS
+    &CELL 
+      ABC [angstrom]    4.593 4.593 2.959
+    &END CELL
+    &COORD
+@include rutile.xyz
+    &END COORD
+    &KIND O
+      BASIS_SET DZVP-MOLOPT-SR-GTH 
+      POTENTIAL GTH-PBE-q6
+    &END KIND
+    &KIND Ti  
+      BASIS_SET DZVP-MOLOPT-SR-GTH
+      POTENTIAL GTH-PBE-q12
+    &END KIND
+  &END SUBSYS
+&END FORCE_EVAL
+
+&GLOBAL
+  PROJECT Universality 
+  RUN_TYPE ENERGY_FORCE
+  PRINT_LEVEL MEDIUM
+&END GLOBAL
