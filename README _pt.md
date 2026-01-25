@@ -1,4 +1,4 @@
-[English](README.md) | [Português](README_pt.md) | [简体中文](README_zh.md) | [日本語](README_ja.md)
+[English](README.md) | [Português](README%20_pt.md) | [简体中文](README%20_zh.md) | [日本語](README%20_ja.md)
 
 # Métodos de Cálculo DFT & Utilitários
 
