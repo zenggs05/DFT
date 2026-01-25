@@ -1,6 +1,6 @@
 import argparse, os.path
 
-# Author: Nick Wagner
+# Author: Gaoshan Zeng
 # This file creates VASP INCAR.static files for some common cases
 # found with transition metal oxides. Only electronic control parameters
 # need to be specified here. Ionic relaxation tags are handled by job
