@@ -1,4 +1,3 @@
-```markdown
 [English](README.md) | [Português](README_pt.md) | [简体中文](README_zh.md) | [日本語](README_ja.md)
 
 # 第一性原理计算方法与工具库 (DFT Utilities)

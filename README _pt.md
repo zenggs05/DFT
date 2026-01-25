@@ -1,4 +1,3 @@
-```markdown
 [English](README.md) | [Português](README_pt.md) | [简体中文](README_zh.md) | [日本語](README_ja.md)
 
 # Métodos de Cálculo DFT & Utilitários
